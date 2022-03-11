@@ -33,11 +33,11 @@ const setting = {
 	},
 	methods: {
 		next() {
-			if (!this.isHover) this.activeIndex == this.slides.length - 1 ? this.activeIndex = 0 : this.activeIndex++;
+			this.activeIndex == this.slides.length - 1 ? this.activeIndex = 0 : this.activeIndex++;
 		}
 	},
 	created() {
-		setInterval(this.next, 3000);
+		setInterval(() =>{if (!this.isHover) this.next()}, 3000);
 	}
 }
 
