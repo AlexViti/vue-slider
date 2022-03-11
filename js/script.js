@@ -1,7 +1,7 @@
 const setting = {
 	el: '#root',
 	data: {
-		array: [
+		slides: [
 			{
 				title:'Svezia',
 				img: '01.jpg',
@@ -27,7 +27,8 @@ const setting = {
 				img: '05.jpg',
 				text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.'
 			}
-		]
+		],
+		activeIndex: 0
 	},
 	method: {
 
