@@ -30,8 +30,13 @@ const setting = {
 		],
 		activeIndex: 0
 	},
-	method: {
-
+	methods: {
+		next() {
+			this.activeIndex == this.slides.length - 1 ? this.activeIndex = 0 : this.activeIndex++;
+		}
+	},
+	created() {
+		setInterval(this.next, 3000);
 	}
 }
 
