@@ -28,11 +28,12 @@ const setting = {
 				text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.'
 			}
 		],
-		activeIndex: 0
+		activeIndex: 0,
+		isHover: false
 	},
 	methods: {
 		next() {
-			this.activeIndex == this.slides.length - 1 ? this.activeIndex = 0 : this.activeIndex++;
+			if (!this.isHover) this.activeIndex == this.slides.length - 1 ? this.activeIndex = 0 : this.activeIndex++;
 		}
 	},
 	created() {
